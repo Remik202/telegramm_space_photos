@@ -33,12 +33,11 @@ def main():
 
             try:
                 with open(photo_path, 'rb') as photo:
-                    photo_bytes = photo.read()
-
-                bot.send_photo(chat_id=chat_id, photo=photo_bytes)
-                print(f'Отправлено: {filename}')
+                    bot.send_photo(chat_id=chat_id, photo=photo.read())
             except TelegramError as error:
                 print(f'Ошибка при отправке {filename}: {error}')
+            except FileNotFoundError:
+                print(f"Файл не найден: {photo_path}")
 
             time.sleep(post_interval)
 
