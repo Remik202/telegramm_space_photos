@@ -22,7 +22,7 @@ def get_epic_links(api_key, max_images):
         date = datetime.strptime(record['date'], '%Y-%m-%d %H:%M:%S')
         name = record['image']
         base_url = f'https://api.nasa.gov/EPIC/archive/natural/{date:%Y/%m/%d}/png/{name}.png'
-        full_url = f'{base_url}?{urlencode({"api_key": api_key})}'
+        full_url = f'{base_url}{params["api_key"]}'
         links.append((full_url, name))
 
     return links
