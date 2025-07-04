@@ -9,7 +9,7 @@
 
 1. Склонируйте проект и перейдите в папку:
    ```
-	git clone https://github.com/maxchuk89/4_telegram_space_photos.git
+	git clone https://github.com/Remik202/telegramm_space_photos
    ```
 
 2. Создайте и активируйте виртуальное окружение (Python 3.10):
